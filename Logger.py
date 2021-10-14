@@ -23,9 +23,13 @@ import time
 
 
 class blk(gr.sync_block):  # other base classes are basic_block, decim_block, interp_block
-    """A Logger for the IDEA Deuterium project """
+    """A Logger for the IDEA Deuterium project 
+       - fftsize - size of the FFT used for logging
+       - outfile - prefix for the output file
+       - loginterval - logging interval, hours
+       """
 
-    def __init__(self, fftsize=1024,outfile="deuterium-"):  # only default arguments here
+    def __init__(self, fftsize=1024,outfile="deuterium-",loginterval=4):  # only default arguments here
         """arguments to this function show up as parameters in GRC"""
         gr.sync_block.__init__(
             self,
@@ -37,7 +41,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
         # Output file prefix here
         #
         self.outfile = outfile
-        
+        self.loginterval = loginterval
         #
         # Create averaging buffers for both main and baseline
         #
@@ -76,13 +80,13 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
             #
             # Once a day, compute averages, log
             #
-            if ((time.time() - self.startt) >= 86100):
+            if ((time.time() - self.startt) >= (self.loginterval*3600)):
 				
 				#
 				# Determine filename
 				#
                 ltp = time.gmtime()
-                fn = self.outfile + "%04d%02d%02d" % (ltp.tm_year,ltp.tm_mon,ltp.tm_mday) + ".csv"
+                fn = self.outfile + "%04d%02d%02d-%02d" % (ltp.tm_year,ltp.tm_mon,ltp.tm_mday, ltp.tm_hour) + ".csv"
                 
                 #
                 # Open it
