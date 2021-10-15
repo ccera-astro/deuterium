@@ -140,7 +140,7 @@ class blk(gr.sync_block):  # other base classes are basic_block, decim_block, in
                 #
                 i = 0
                 for val in adjusted:
-                    fp.write ("%9.5e" % val)
+                    fp.write ("%10.6e" % val)
                     i += 1
                     #
                     # Don't write a trailing ","

@@ -179,10 +179,10 @@ blocks:
       \ = 0\n                self.basecount = 0\n                \n              \
       \  #\n                # Write out the (adjusted) values\n                #\n\
       \                i = 0\n                for val in adjusted:\n             \
-      \       fp.write (\"%9.5e\" % val)\n                    i += 1\n           \
-      \         #\n                    # Don't write a trailing \",\"\n          \
-      \          #\n                    if (i < len(v)):\n                       \
-      \ fp.write(\",\")\n                fp.write(\"\\n\")\n                fp.close()\n\
+      \       fp.write (\"%10.6e\" % val)\n                    i += 1\n          \
+      \          #\n                    # Don't write a trailing \",\"\n         \
+      \           #\n                    if (i < len(v)):\n                      \
+      \  fp.write(\",\")\n                fp.write(\"\\n\")\n                fp.close()\n\
       \                \n                #\n                # Reset our logging timer\n\
       \                #\n                self.startt = time.time()\n            \
       \        \n            \n        return len(input_items[0])\n"
