@@ -1068,7 +1068,7 @@ blocks:
     average: '0.05'
     axislabels: 'True'
     bw: srate/10
-    color1: '"blue"'
+    color1: '"green"'
     color10: '"dark blue"'
     color2: '"red"'
     color3: '"green"'
@@ -1086,7 +1086,7 @@ blocks:
     grid: 'True'
     gui_hint: ''
     label: Relative power(dB)
-    label1: ''
+    label1: '"D1 Spectrum"'
     label10: ''''''
     label2: ''''''
     label3: ''''''
@@ -1099,7 +1099,7 @@ blocks:
     legend: 'True'
     maxoutbuf: '0'
     minoutbuf: '0'
-    name: '""'
+    name: '"Power Spectrum"'
     nconnections: '1'
     showports: 'False'
     tr_chan: '0'
