@@ -1109,7 +1109,7 @@ blocks:
     type: complex
     units: dB
     update_time: '0.10'
-    width1: '1'
+    width1: '2'
     width10: '1'
     width2: '1'
     width3: '1'
