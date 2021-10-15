@@ -77,7 +77,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1912, 148.0]
+    coordinate: [2096, 132.0]
     rotation: 0
     state: true
 - name: sinc
@@ -666,7 +666,7 @@ blocks:
   id: note
   parameters:
     alias: ''
-    comment: Scaling
+    comment: Scaling to reduce the integrator output
     note: ''
   states:
     bus_sink: false
