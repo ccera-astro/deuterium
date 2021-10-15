@@ -193,7 +193,7 @@ blocks:
     loginterval: loginterval
     maxoutbuf: '0'
     minoutbuf: '0'
-    outfile: '''deuterium-'''
+    outfile: prefix
   states:
     _io_cache: ('Deuterium Logger', 'blk', [('fftsize', '1024'), ('outfile', "'deuterium-'"),
       ('loginterval', '4')], [('0', 'float', 1024)], [], 'A Logger for the IDEA Deuterium
@@ -503,7 +503,7 @@ blocks:
     hide: none
     label: '"Device string"'
     short_id: ''
-    type: ''
+    type: str
     value: '"rtl=0"'
   states:
     bus_sink: false
@@ -1030,6 +1030,23 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [288, 668.0]
+    rotation: 0
+    state: enabled
+- name: prefix
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '"Output files prefix"'
+    short_id: ''
+    type: str
+    value: '"./deuterium-"'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1440, 564.0]
     rotation: 0
     state: enabled
 - name: qtgui_freq_sink_x_0
