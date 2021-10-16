@@ -1,0 +1,9 @@
+#!/bin/bash
+source $HOME/station_variables
+if [ -e /usr/local/bin/deuterium.py ]
+then
+	GR_CONF_QTGUI_QSS=/home/astronomer/.gnuradio/my-projector.qss \
+         deuterium.py --prefix $HOME/deuterium_data/d1-${D1_STATION}- --device rtl=0 \
+	--srate 2.56e6 --frequency 327.4e6 --loginterval 6 --rfgain 50 \
+	--integrate 20 >>$HOME/deuterium.log 2>&1
+fi

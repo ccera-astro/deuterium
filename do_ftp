@@ -1,0 +1,16 @@
+#!/bin/bash
+source $HOME/station_variables
+cd $HOME/deuterium_data
+#
+# Send files
+#
+ftp -n $D1_FTPSERVER <<!EOF!
+user $D1_FTPUSER $D1_FTPPASS
+prompt
+mput *.csv
+!EOF!
+
+#
+# Delete old files
+#
+find . -name "*.csv" -mtime +5 -exec rm -f '{}' ';'
