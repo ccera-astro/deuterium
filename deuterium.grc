@@ -65,7 +65,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [976, 860.0]
+    coordinate: [976, 884.0]
     rotation: 0
     state: true
 - name: reduction
@@ -113,7 +113,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [800, 860.0]
+    coordinate: [800, 900.0]
     rotation: 0
     state: true
 - name: Logger
@@ -206,6 +206,23 @@ blocks:
     coordinate: [1960, 780.0]
     rotation: 0
     state: true
+- name: antenna
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: '"Antenna Selector"'
+    short_id: ''
+    type: str
+    value: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 668.0]
+    rotation: 0
+    state: enabled
 - name: blocks_add_xx_0
   id: blocks_add_xx
   parameters:
@@ -492,7 +509,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [984, 748.0]
+    coordinate: [984, 780.0]
     rotation: 0
     state: true
 - name: device
@@ -529,7 +546,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [808, 740.0]
+    coordinate: [808, 772.0]
     rotation: 0
     state: true
 - name: fft_vxx_0
@@ -680,7 +697,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    ant0: ''
+    ant0: antenna
     ant1: ''
     ant10: ''
     ant11: ''
